@@ -44,6 +44,10 @@ CGRect CGRectCenterRectInRectVertically(CGRect subRect, CGRect masterRect) {
     return CGRectIntegral(CGRectAdjustOrigin(subRect, origin));
 }
 
+CGRect CGRectInsetByPercent(CGRect rect, CGFloat xPercent, CGFloat yPercent) {
+    return CGRectIntegral(CGRectInset(rect, rect.size.width * xPercent, rect.size.height * yPercent));
+}
+
 void CGRectIntegralSizeToFit(UIView *view) {
     [view sizeToFit]; 
     view.frame = CGRectIntegral(view.frame);

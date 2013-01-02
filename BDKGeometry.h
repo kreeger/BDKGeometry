@@ -7,6 +7,7 @@ CGRect CGRectAdjustXOrigin(CGRect rect, CGFloat xOrigin);
 CGRect CGRectCenterRectInRect(CGRect subRect, CGRect masterRect);
 CGRect CGRectCenterRectInRectHorizontally(CGRect subRect, CGRect masterRect);
 CGRect CGRectCenterRectInRectVertically(CGRect subRect, CGRect masterRect);
+CGRect CGRectInsetByPercent(CGRect rect, CGFloat xPercent, CGFloat yPercent);
 void CGRectIntegralSizeToFit(UIView *view);
 CGSize CGSizeByDoubling(CGSize size);
 CGRect CGRectByDoublingSize(CGRect rect);
