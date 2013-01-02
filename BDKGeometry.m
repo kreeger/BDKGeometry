@@ -1,3 +1,8 @@
+/*
+ *  BDKGeometry.m
+ *  Written by Ben Kreeger.
+ */
+
 CGRect CGRectAdjustSize(CGRect rect, CGSize size) {
     rect.size = size;
     return rect;
