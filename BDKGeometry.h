@@ -8,42 +8,48 @@
  *  @param size a new CGSize to assign to `rect`.
  *  @return a new rect with the given size.
  */
-CGRect CGRectAdjustSize(CGRect rect, CGSize size);
+CGRect CGRectSetSize(CGRect rect, CGSize size);
+CGRect CGRectAdjustSize(CGRect rect, CGSize size) __attribute__((deprecated));
 
 /** Gives a rect a new origin.
  *  @param rect the rect on which to operate.
  *  @param origin a new origin CGPoint to assign to `rect`.
  *  @return a new rect with the given origin.
  */
-CGRect CGRectAdjustOrigin(CGRect rect, CGPoint origin);
+CGRect CGRectSetOrigin(CGRect rect, CGPoint origin);
+CGRect CGRectAdjustOrigin(CGRect rect, CGPoint origin) __attribute__((deprecated));
 
 /** Gives a rect's size a new width.
  *  @param rect the rect on which to operate.
  *  @param width a new width CGFloat to assign to `rect`.
  *  @return a new rect with the given width.
  */
-CGRect CGRectAdjustWidth(CGRect rect, CGFloat width);
+CGRect CGRectSetWidth(CGRect rect, CGFloat width);
+CGRect CGRectAdjustWidth(CGRect rect, CGFloat width) __attribute__((deprecated));
 
 /** Gives a rect a new height.
  *  @param rect the rect on which to operate.
  *  @param size a new height CGFloat to assign to `rect`.
  *  @return a new rect with the given height.
  */
-CGRect CGRectAdjustHeight(CGRect rect, CGFloat height);
+CGRect CGRectSetHeight(CGRect rect, CGFloat height);
+CGRect CGRectAdjustHeight(CGRect rect, CGFloat height) __attribute__((deprecated));
 
 /** Gives a rect a new y-origin.
  *  @param rect the rect on which to operate.
  *  @param size a new y-origin CGFloat to assign to `rect`.
  *  @return a new rect with the given y-origin.
  */
-CGRect CGRectAdjustYOrigin(CGRect rect, CGFloat yOrigin);
+CGRect CGRectSetYOrigin(CGRect rect, CGFloat yOrigin);
+CGRect CGRectAdjustYOrigin(CGRect rect, CGFloat yOrigin) __attribute__((deprecated));
 
 /** Gives a rect a new x-origin.
  *  @param rect the rect on which to operate.
  *  @param size a new x-origin CGFloat to assign to `rect`.
  *  @return a new rect with the given x-origin.
  */
-CGRect CGRectAdjustXOrigin(CGRect rect, CGFloat xOrigin);
+CGRect CGRectSetXOrigin(CGRect rect, CGFloat xOrigin);
+CGRect CGRectAdjustXOrigin(CGRect rect, CGFloat xOrigin) __attribute__((deprecated));
 
 /** Centers a child (sub) rect inside of a parent (master) rect, using both width and height.
  *  @param subRect the child rect, which will be altered and returned.

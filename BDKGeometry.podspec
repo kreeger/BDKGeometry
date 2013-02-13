@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                  = 'BDKGeometry'
-  s.version               = '1.0.1'
+  s.version               = '1.1.0'
   s.platform              = :ios
   s.summary               = "A set of helper functions I've been using in various XCode projects, abstracted for great good."
   s.homepage              = 'http://github.com/kreeger/BDKGeometry'
@@ -17,7 +17,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     LICENSE
   }
   s.author                = { 'Ben Kreeger' => 'ben@kree.gr' }
-  s.source                = { :git => 'https://github.com/kreeger/BDKGeometry.git', :tag => 'v1.0.1' }
+  s.source                = { :git => 'https://github.com/kreeger/BDKGeometry.git', :tag => 'v1.1.0' }
   s.ios.deployment_target = '5.0'
   s.source_files          = 'BDKGeometry.{h,m}'
   s.requires_arc          = true
