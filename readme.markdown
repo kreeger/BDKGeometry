@@ -33,4 +33,10 @@ platform :ios, '5.0'
 pod 'BDKGeometry', '~> 1.1.0'
 ```
 
+## Wanna thank me?
+
+<a href="http://flattr.com/thing/1136808/" target="_blank">
+<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
+
 [0]:     https://github.com/kreeger/BDKGeometry/blob/master/BDKGeometry.h
+[1]:     http://cocoapods.org
