@@ -3,6 +3,9 @@
  *  Written by Ben Kreeger.
  */
 
+ #import <UIKit/UIKit.h>
+ #import "UIView+BDKGeometry.h"
+
 /** Gives a rect a new size.
  *  @param rect the rect on which to operate.
  *  @param size a new CGSize to assign to `rect`.
