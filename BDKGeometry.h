@@ -80,6 +80,14 @@ CGRect CGRectCenterRectInRectVertically(CGRect subRect, CGRect masterRect);
  */
 CGRect CGRectInsetByPercent(CGRect rect, CGFloat xPercent, CGFloat yPercent);
 
+/** Uses `CGRectDivide` and disposes the remainder.
+ *  @param rect the rect which will be altered and returned.
+ *  @param amount the amount to trim off.
+ *  @param edge the edge to trim from.
+ *  @return the modified `rect`.
+ */
+CGRect CGRectSubtract(CGRect rect, CGFloat amount, CGRectEdge edge);
+
 /** Modifies a given view's frame by calling `-[UIView sizeToFit]` on itself, and then ensuring it's integral by
  *  calling `CGRectIntegral` on the view's new frame.
  *  @param view the view on which to operate.

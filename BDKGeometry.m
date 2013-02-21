@@ -12,7 +12,7 @@ CGRect CGRectAdjustSize(CGRect rect, CGSize size) { return CGRectSetSize(rect, s
 
 CGRect CGRectSetOrigin(CGRect rect, CGPoint origin) {
     rect.origin = origin;
-    return rect;
+    return CGRectIntegral(rect);
 }
 
 CGRect CGRectAdjustOrigin(CGRect rect, CGPoint origin) { return CGRectSetOrigin(rect, origin); }
@@ -33,14 +33,14 @@ CGRect CGRectAdjustHeight(CGRect rect, CGFloat height) { return CGRectSetHeight(
 
 CGRect CGRectSetYOrigin(CGRect rect, CGFloat yOrigin) {
     rect.origin.y = yOrigin;
-    return rect;
+    return CGRectIntegral(rect);
 }
 
 CGRect CGRectAdjustYOrigin(CGRect rect, CGFloat yOrigin) { return CGRectSetYOrigin(rect, yOrigin); }
 
 CGRect CGRectSetXOrigin(CGRect rect, CGFloat xOrigin) {
     rect.origin.x = xOrigin;
-    return rect;
+    return CGRectIntegral(rect);
 }
 
 CGRect CGRectAdjustXOrigin(CGRect rect, CGFloat xOrigin) { return CGRectSetXOrigin(rect, xOrigin); }
@@ -65,6 +65,13 @@ CGRect CGRectInsetByPercent(CGRect rect, CGFloat xPercent, CGFloat yPercent) {
     CGRect oldRect = rect;
     rect = CGRectSetSize(rect, CGSizeMake(rect.size.width * xPercent, rect.size.height * yPercent));
     return CGRectCenterRectInRect(rect, oldRect);
+}
+
+CGRect CGRectSubtract(CGRect rect, CGFloat amount, CGRectEdge edge) {
+    CGRect useless = CGRectNull;
+    CGRect newRect = CGRectNull;
+    CGRectDivide(rect, &useless, &newRect, amount, edge);
+    return CGRectIntegral(newRect);
 }
 
 void CGRectIntegralSizeToFit(UIView *view) {
