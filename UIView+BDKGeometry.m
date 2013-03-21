@@ -35,4 +35,20 @@
     [self setYOrigin:CGRectGetMaxY(view.frame) + padding];
 }
 
+- (void)centerInView:(UIView *)view direction:(BDKGeometryCenter)direction {
+    switch (direction) {
+        case BDKGeometryCenterHorizontally:
+            self.frame = CGRectCenterRectInRectHorizontally(self.frame, view.frame);
+            break;
+        case BDKGeometryCenterVertically:
+            self.frame = CGRectCenterRectInRectVertically(self.frame, view.frame);
+            break;
+        case BDKGeometryCenterBoth:
+            self.frame = CGRectCenterRectInRect(self.frame, view.frame);
+            break;
+        default:
+            break;
+    }
+}
+
 @end

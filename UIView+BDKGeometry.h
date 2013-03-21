@@ -1,5 +1,11 @@
 #import <UIKit/UIKit.h>
 
+typedef enum {
+    BDKGeometryCenterHorizontally = 0,
+    BDKGeometryCenterVertically,
+    BDKGeometryCenterBoth,
+} BDKGeometryCenter;
+
 /** A set of geometry convenience methods for UIView.
  */
 @interface UIView (BDKGeometry)
@@ -44,5 +50,11 @@
  *  @param padding the padding to put between.
  */
 - (void)positionViewBelowView:(UIView *)view padding:(CGFloat)padding;
+
+/** Centers this view in another view.
+ *  @param view the view in which to center the current view.
+ *  @param direction whether to center vertically, horizontally, or both.
+ */
+- (void)centerInView:(UIView *)view direction:(BDKGeometryCenter)direction;
 
 @end
