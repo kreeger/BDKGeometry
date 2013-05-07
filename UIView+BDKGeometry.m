@@ -3,28 +3,54 @@
 
 @implementation UIView (BDKGeometry)
 
-- (void)setOrigin:(CGPoint)origin {
-    self.frame = CGRectSetOrigin(self.frame, origin);
+@dynamic frameOrigin, frameXOrigin, frameYOrigin, frameSize, frameWidth, frameHeight;
+
+- (void)setFrameOrigin:(CGPoint)frameOrigin {
+    self.frame = CGRectSetOrigin(self.frame, frameOrigin);
 }
 
-- (void)setXOrigin:(CGFloat)xOrigin {
-    self.frame = CGRectSetXOrigin(self.frame, xOrigin);
+- (CGPoint)frameOrigin {
+    return self.frame.origin;
 }
 
-- (void)setYOrigin:(CGFloat)yOrigin {
-    self.frame = CGRectSetYOrigin(self.frame, yOrigin);
+- (void)setFrameXOrigin:(CGFloat)frameXOrigin {
+    self.frame = CGRectSetXOrigin(self.frame, frameXOrigin);
 }
 
-- (void)setSize:(CGSize)size {
-    self.frame = CGRectSetSize(self.frame, size);
+- (CGFloat)frameXOrigin {
+    return self.frame.origin.x;
 }
 
-- (void)setWidth:(CGFloat)width {
-    self.frame = CGRectSetWidth(self.frame, width);
+- (void)setFrameYOrigin:(CGFloat)frameYOrigin {
+    self.frame = CGRectSetYOrigin(self.frame, frameYOrigin);
 }
 
-- (void)setHeight:(CGFloat)height {
-    self.frame = CGRectSetHeight(self.frame, height);
+- (CGFloat)frameYOrigin {
+    return self.frame.origin.y;
+}
+
+- (void)setFrameSize:(CGSize)frameSize {
+    self.frame = CGRectSetSize(self.frame, frameSize);
+}
+
+- (CGSize)frameSize {
+    return self.frame.size;
+}
+
+- (void)setFrameWidth:(CGFloat)frameWidth {
+    self.frame = CGRectSetWidth(self.frame, frameWidth);
+}
+
+- (CGFloat)frameWidth {
+    return self.frame.size.width;
+}
+
+- (void)setFrameHeight:(CGFloat)frameHeight {
+    self.frame = CGRectSetHeight(self.frame, frameHeight);
+}
+
+- (CGFloat)frameHeight {
+    return self.frame.size.height;
 }
 
 - (void)positionViewBelowView:(UIView *)view {
@@ -50,5 +76,14 @@
             break;
     }
 }
+
+#pragma mark - Deprecated methods
+
+- (void)setOrigin:(CGPoint)origin { self.frameOrigin = origin; }
+- (void)setXOrigin:(CGFloat)xOrigin { self.frameXOrigin = xOrigin; }
+- (void)setYOrigin:(CGFloat)yOrigin { self.frameYOrigin = yOrigin; }
+- (void)setSize:(CGSize)size { self.frameSize = size; }
+- (void)setWidth:(CGFloat)width { self.frameWidth = width; }
+- (void)setHeight:(CGFloat)height { self.frameHeight = height; }
 
 @end

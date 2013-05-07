@@ -10,35 +10,42 @@ typedef enum {
  */
 @interface UIView (BDKGeometry)
 
+@property (nonatomic) CGPoint frameOrigin;
+@property (nonatomic) CGFloat frameXOrigin;
+@property (nonatomic) CGFloat frameYOrigin;
+@property (nonatomic) CGSize frameSize;
+@property (nonatomic) CGFloat frameWidth;
+@property (nonatomic) CGFloat frameHeight;
+
 /** Origin modification helper.
  *  @param origin the origin to use.
  */
-- (void)setOrigin:(CGPoint)origin;
+- (void)setOrigin:(CGPoint)origin __attribute__((deprecated));
 
 /** X-origin modification helper.
  *  @param xOrigin the x-origin to use.
  */
-- (void)setXOrigin:(CGFloat)xOrigin;
+- (void)setXOrigin:(CGFloat)xOrigin __attribute__((deprecated));
 
 /** Y-origin modification helper.
  *  @param yOrigin the y-origin to use.
  */
-- (void)setYOrigin:(CGFloat)yOrigin;
+- (void)setYOrigin:(CGFloat)yOrigin __attribute__((deprecated));
 
 /** Size modification helper.
  *  @param size the size to use.
  */
-- (void)setSize:(CGSize)size;
+- (void)setSize:(CGSize)size __attribute__((deprecated));
 
 /** Width modification helper.
  *  @param width the width to use.
  */
-- (void)setWidth:(CGFloat)width;
+- (void)setWidth:(CGFloat)width __attribute__((deprecated));
 
 /** Height modification helper.
  *  @param height the height to use.
  */
-- (void)setHeight:(CGFloat)height;
+- (void)setHeight:(CGFloat)height __attribute__((deprecated));
 
 /** Positions a view directly beneath another view.
  *  @param view the view to position this view below.
