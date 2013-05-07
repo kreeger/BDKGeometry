@@ -58,7 +58,7 @@
 }
 
 - (void)positionViewBelowView:(UIView *)view padding:(CGFloat)padding {
-    [self setYOrigin:CGRectGetMaxY(view.frame) + padding];
+    self.frameYOrigin = CGRectGetMaxY(view.frame) + padding;
 }
 
 - (void)centerInView:(UIView *)view direction:(BDKGeometryCenter)direction {
