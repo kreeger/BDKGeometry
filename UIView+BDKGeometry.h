@@ -16,6 +16,12 @@ typedef enum {
 @property (nonatomic) CGSize frameSize;
 @property (nonatomic) CGFloat frameWidth;
 @property (nonatomic) CGFloat frameHeight;
+@property (nonatomic) CGPoint boundsOrigin;
+@property (nonatomic) CGFloat boundsXOrigin;
+@property (nonatomic) CGFloat boundsYOrigin;
+@property (nonatomic) CGSize boundsSize;
+@property (nonatomic) CGFloat boundsWidth;
+@property (nonatomic) CGFloat boundsHeight;
 
 /** Origin modification helper.
  *  @param origin the origin to use.

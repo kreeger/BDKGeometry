@@ -4,6 +4,9 @@
 @implementation UIView (BDKGeometry)
 
 @dynamic frameOrigin, frameXOrigin, frameYOrigin, frameSize, frameWidth, frameHeight;
+@dynamic boundsOrigin, boundsXOrigin, boundsYOrigin, boundsSize, boundsWidth, boundsHeight;
+
+#pragma mark - Frame methods
 
 - (void)setFrameOrigin:(CGPoint)frameOrigin {
     self.frame = CGRectSetOrigin(self.frame, frameOrigin);
@@ -51,6 +54,56 @@
 
 - (CGFloat)frameHeight {
     return self.frame.size.height;
+}
+
+#pragma mark - Bounds methods
+
+- (void)setBoundsOrigin:(CGPoint)boundsOrigin {
+    self.bounds = CGRectSetOrigin(self.bounds, boundsOrigin);
+}
+
+- (CGPoint)boundsOrigin {
+    return self.bounds.origin;
+}
+
+- (void)setBoundsXOrigin:(CGFloat)boundsXOrigin {
+    self.bounds = CGRectSetXOrigin(self.bounds, boundsXOrigin);
+}
+
+- (CGFloat)boundsXOrigin {
+    return self.bounds.origin.x;
+}
+
+- (void)setBoundsYOrigin:(CGFloat)boundsYOrigin {
+    self.bounds = CGRectSetYOrigin(self.bounds, boundsYOrigin);
+}
+
+- (CGFloat)boundsYOrigin {
+    return self.bounds.origin.y;
+}
+
+- (void)setBoundsSize:(CGSize)boundsSize {
+    self.bounds = CGRectSetSize(self.bounds, boundsSize);
+}
+
+- (CGSize)boundsSize {
+    return self.bounds.size;
+}
+
+- (void)setBoundsWidth:(CGFloat)boundsWidth {
+    self.bounds = CGRectSetWidth(self.bounds, boundsWidth);
+}
+
+- (CGFloat)boundsWidth {
+    return self.bounds.size.width;
+}
+
+- (void)setBoundsHeight:(CGFloat)boundsHeight {
+    self.bounds = CGRectSetHeight(self.bounds, boundsHeight);
+}
+
+- (CGFloat)boundsHeight {
+    return self.bounds.size.height;
 }
 
 - (void)positionViewBelowView:(UIView *)view {
