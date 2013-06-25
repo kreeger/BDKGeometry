@@ -70,4 +70,8 @@ typedef enum {
  */
 - (void)centerInView:(UIView *)view direction:(BDKGeometryCenter)direction;
 
+#pragma mark - Autolayout
+
+- (void)constrainSubview:(UIView *)subview withAttribute:(NSLayoutAttribute)attribute constant:(CGFloat)constant;
+
 @end

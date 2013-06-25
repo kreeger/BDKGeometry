@@ -130,6 +130,15 @@
     }
 }
 
+#pragma mark - Autolayout
+
+- (void)constrainSubview:(UIView *)subview withAttribute:(NSLayoutAttribute)attribute constant:(CGFloat)constant {
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:subview attribute:attribute
+                                                     relatedBy:NSLayoutRelationEqual
+                                                        toItem:self attribute:attribute
+                                                    multiplier:1 constant:0]];;
+}
+
 #pragma mark - Deprecated methods
 
 - (void)setOrigin:(CGPoint)origin { self.frameOrigin = origin; }

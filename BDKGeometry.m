@@ -86,3 +86,7 @@ CGSize CGSizeByDoubling(CGSize size) {
 CGRect CGRectByDoublingSize(CGRect rect) {
     return CGRectSetSize(rect, CGSizeByDoubling(rect.size));
 }
+
+CGRect CGRectFor1PxStroke(CGRect rect) {
+    return CGRectInset(rect, 0.5, 0.5);
+}

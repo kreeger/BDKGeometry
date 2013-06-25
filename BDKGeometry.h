@@ -3,8 +3,8 @@
  *  Written by Ben Kreeger.
  */
 
- #import <UIKit/UIKit.h>
- #import "UIView+BDKGeometry.h"
+#import <UIKit/UIKit.h>
+#import "UIView+BDKGeometry.h"
 
 /** Gives a rect a new size.
  *  @param rect the rect on which to operate.
@@ -108,3 +108,10 @@ CGSize CGSizeByDoubling(CGSize size);
  *  @return a new doubled-size rect.
  */
 CGRect CGRectByDoublingSize(CGRect rect);
+
+/** Generates a rect for drawing 1-pixel lines.
+ *  @param rect The rect to inset by a half pixel.
+ *  @returns A new rect.
+ */
+CGRect CGRectFor1PxStroke(CGRect rect);
+
